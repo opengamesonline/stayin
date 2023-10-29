@@ -11,3 +11,7 @@ If you run into trouble, help is available in [our forum](https://forum.defold.c
 Happy Defolding!
 
 ---
+
+# Setup
+
+Run the `Defold Buddy: Initialize` command to set up the workspace.
