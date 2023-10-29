@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+      "mikatuo.vscode-defold-ide",
+      "dtoplak.vscode-glsllint",
+      "sumneko.lua",
+      "slevesque.shader",
+      "thejustinwalsh.textproto-grammer",
+      "koihik.vscode-lua-format"
+    ]
+}
