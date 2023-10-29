@@ -119,4 +119,24 @@ instances {
     z: 1.0
   }
 }
+instances {
+  id: "ball"
+  prototype: "/main/ball/ball.go"
+  position {
+    x: 334.0
+    y: 269.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 0.1
+    y: 0.1
+    z: 1.0
+  }
+}
 scale_along_z: 0

@@ -1,6 +1,6 @@
 components {
-  id: "bouncer-script"
-  component: "/main/bouncer/bouncer.script"
+  id: "ball-script"
+  component: "/main/ball/ball.script"
   position {
     x: 0.0
     y: 0.0
@@ -16,8 +16,8 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/main/bouncer/bouncer.atlas\"\n"
-  "default_animation: \"bouncer\"\n"
+  data: "tile_set: \"/main/ball/ball.atlas\"\n"
+  "default_animation: \"ball\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
@@ -34,18 +34,18 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "bouncer"
+  id: "ball"
   type: "collisionobject"
   data: "collision_shape: \"\"\n"
   "type: COLLISION_OBJECT_TYPE_DYNAMIC\n"
-  "mass: 1000.0\n"
+  "mass: 1.0\n"
   "friction: 0.0\n"
   "restitution: 1.0\n"
   "group: \"default\"\n"
   "mask: \"default\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
-  "    shape_type: TYPE_BOX\n"
+  "    shape_type: TYPE_SPHERE\n"
   "    position {\n"
   "      x: 0.0\n"
   "      y: 0.0\n"
@@ -58,16 +58,14 @@ embedded_components {
   "      w: 1.0\n"
   "    }\n"
   "    index: 0\n"
-  "    count: 3\n"
+  "    count: 1\n"
   "  }\n"
-  "  data: 992.5\n"
-  "  data: 85.0\n"
-  "  data: 10.0\n"
+  "  data: 162.5\n"
   "}\n"
   "linear_damping: 0.0\n"
   "angular_damping: 0.0\n"
   "locked_rotation: false\n"
-  "bullet: false\n"
+  "bullet: true\n"
   ""
   position {
     x: 0.0
