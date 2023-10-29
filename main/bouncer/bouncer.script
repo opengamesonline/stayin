@@ -6,6 +6,10 @@ function init(self)
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
+
+	windowLength, windowHeight = window.get_size()
+	go.set_position(vmath.vector3(windowLength / 2, windowHeight / 8, 0))
+	
 	msg.post(".", "acquire_input_focus")
 	self.speed = 0
 end
