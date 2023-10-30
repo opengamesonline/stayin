@@ -27,6 +27,9 @@ function update(self, dt)
 	local p = go.get_position()
 	local velocity = go.get("#bouncer", "linear_velocity")
 
+	-- disable vertical velocity
+	go.set("#bouncer", "linear_velocity", vmath.vector3(velocity.x, 0, 0))
+
 	-- reset bouncer if it is below y == 0
 	if p.y < 0 then
 		print("FAILURE")

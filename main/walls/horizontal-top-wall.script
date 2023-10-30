@@ -1,18 +1,9 @@
-local max_speed = 600
-
 function init(self)
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
-
-	windowLength, windowHeight = window.get_size()
-	go.set_position(vmath.vector3(windowLength / 2, windowHeight / 2, 0))
-
-	-- this does not seem to be working for some reason
-	-- msg.post("#ball", "apply_force", {force = vmath.vector3(0, -200, 0), position = go.get_world_position()})
-
-	-- For some reason velocity is slowly going down
-	go.set("#ball", "linear_velocity", vmath.vector3(0, -500, 0))
+	local windowLength, windowHeight = window.get_size()
+	go.set_position(vmath.vector3(windowLength, windowHeight, 0))
 end
 
 function final(self)
@@ -22,24 +13,9 @@ function final(self)
 end
 
 function update(self, dt)
-	windowLength, windowHeight = window.get_size()
-	-- msg.post("#ball", "apply_force", {force = vmath.vector3(0, -200, 0), position = go.get_world_position()})
-	local p = go.get_position()
-	local velocity = go.get("#ball", "linear_velocity")
-
-	-- go.set("#ball", "linear_velocity", velocity)
-
-	if p.y < 0 then
-		print("FAILURE")
-		go.set_position(vmath.vector3(windowLength / 2, windowHeight / 2, 0))
-	end
 	-- Add update code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
-	-- local p = go.get_position()
-	-- p.y = p.y + self.speed * dt
-	-- go.set_position(p)
-	-- self.speed = -6
 end
 
 function fixed_update(self, dt)
