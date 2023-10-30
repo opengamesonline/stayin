@@ -25,14 +25,27 @@ function update(self, dt)
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
 	local p = go.get_position()
-	p.x = p.x + self.speed * dt
-	if p.x < min_x then
-		p.x = min_x
-	elseif p.x > max_x then
-		p.x = max_x
+	local velocity = go.get("#bouncer", "linear_velocity")
+
+	-- reset bouncer if it is below y == 0
+	if p.y < 0 then
+		print("FAILURE")
+		windowLength, windowHeight = window.get_size()
+		go.set_position(vmath.vector3(windowLength / 2, windowHeight / 8, 0))
+		go.set_rotation(vmath.quat(0, 0, 0, 0))
+		go.set("#bouncer", "linear_velocity", vmath.vector3(0, 0, 0))
+	-- move bouncer based on input
+	else
+		p.x = p.x + self.speed * dt
+		if p.x < min_x then
+			p.x = min_x
+		elseif p.x > max_x then
+			p.x = max_x
+		end
+		go.set_position(p)
+		self.speed = 0
 	end
-	go.set_position(p)
-	self.speed = 0
+	
 end
 
 function fixed_update(self, dt)
