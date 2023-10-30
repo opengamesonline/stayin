@@ -7,7 +7,7 @@ function init(self)
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
 
-	windowLength, windowHeight = window.get_size()
+	local windowLength, windowHeight = window.get_size()
 	go.set_position(vmath.vector3(windowLength / 2, windowHeight / 8, 0))
 	
 	msg.post(".", "acquire_input_focus")
@@ -30,7 +30,7 @@ function update(self, dt)
 	-- reset bouncer if it is below y == 0
 	if p.y < 0 then
 		print("FAILURE")
-		windowLength, windowHeight = window.get_size()
+		local windowLength, windowHeight = window.get_size()
 		go.set_position(vmath.vector3(windowLength / 2, windowHeight / 8, 0))
 		go.set_rotation(vmath.quat(0, 0, 0, 0))
 		go.set("#bouncer", "linear_velocity", vmath.vector3(0, 0, 0))
