@@ -15,3 +15,17 @@ Happy Defolding!
 # Setup
 
 Run the `Defold Buddy: Initialize` command to set up the workspace.
+
+## TODO Items
+- Fix issue with ball moving slow
+- Fix issue with ball speed changing on window resize
+- Use factory to create point blocks, make them Kinematic
+- Point blocks disappear upon contact
+- Add point system
+- Add timer
+- Add menu
+- Add back falling to bouncer
+- Create deployment pipeline to Itch.io
+
+## Credits
+- Assets made with Microsoft PowerPoint
