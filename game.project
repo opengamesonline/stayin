@@ -16,4 +16,5 @@ title = stayin
 
 [physics]
 gravity_y = 0.0
+scale = 0.1
 
