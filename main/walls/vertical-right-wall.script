@@ -1,4 +1,0 @@
-function init(self)
-    local windowLength, windowHeight = window.get_size()
-    go.set_position(vmath.vector3(windowLength + 1, windowHeight, 0))
-end

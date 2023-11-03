@@ -1,23 +1,8 @@
-components {
-  id: "vertical-left-wall-script"
-  component: "/main/walls/vertical-left-wall.script"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
 embedded_components {
   id: "vertical-left-wall"
   type: "collisionobject"
   data: "collision_shape: \"\"\n"
-  "type: COLLISION_OBJECT_TYPE_KINEMATIC\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\n"
   "mass: 0.0\n"
   "friction: 0.0\n"
   "restitution: 1.0\n"
@@ -28,7 +13,7 @@ embedded_components {
   "    shape_type: TYPE_BOX\n"
   "    position {\n"
   "      x: 0.0\n"
-  "      y: 0.0\n"
+  "      y: 320.0\n"
   "      z: 0.0\n"
   "    }\n"
   "    rotation {\n"
@@ -41,7 +26,7 @@ embedded_components {
   "    count: 3\n"
   "  }\n"
   "  data: 0.5\n"
-  "  data: 5000.0\n"
+  "  data: 320.0\n"
   "  data: 10.0\n"
   "}\n"
   "linear_damping: 0.0\n"
@@ -70,7 +55,7 @@ embedded_components {
   "blend_mode: BLEND_MODE_ALPHA\n"
   "size {\n"
   "  x: 1.0\n"
-  "  y: 10000.0\n"
+  "  y: 640.0\n"
   "  z: 0.0\n"
   "  w: 0.0\n"
   "}\n"
@@ -78,7 +63,7 @@ embedded_components {
   ""
   position {
     x: 0.0
-    y: 0.0
+    y: 320.0
     z: 0.0
   }
   rotation {

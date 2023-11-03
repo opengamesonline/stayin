@@ -143,8 +143,8 @@ instances {
   id: "horizontal-top-wall"
   prototype: "/main/walls/horizontal-top-wall.go"
   position {
-    x: 154.0
-    y: 533.0
+    x: 480.0
+    y: 640.5
     z: 0.0
   }
   rotation {
@@ -163,8 +163,8 @@ instances {
   id: "horizontal-bottom-wall"
   prototype: "/main/walls/horizontal-bottom-wall.go"
   position {
-    x: 52.0
-    y: 141.0
+    x: 480.0
+    y: -0.5
     z: 0.0
   }
   rotation {
@@ -183,7 +183,7 @@ instances {
   id: "vertical-right-wall"
   prototype: "/main/walls/vertical-right-wall.go"
   position {
-    x: 0.0
+    x: 960.5
     y: 0.0
     z: 0.0
   }
@@ -203,7 +203,7 @@ instances {
   id: "vertical-left-wall"
   prototype: "/main/walls/vertical-left-wall.go"
   position {
-    x: 0.0
+    x: -0.5
     y: 0.0
     z: 0.0
   }
