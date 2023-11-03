@@ -1,5 +1,4 @@
-local max_speed = 600
-local min_x = 100
+local max_speed = 400
 
 function init(self)
 	local windowLength, windowHeight = window.get_size()
@@ -11,8 +10,8 @@ end
 
 function update(self, dt)
 	local p = go.get_position()
-	local velocity = go.get("#bouncer", "linear_velocity")
-	local windowLength, windowHeight = window.get_size()
+	-- local velocity = go.get("#bouncer", "linear_velocity")
+	-- local windowLength, windowHeight = window.get_size()
 
 	-- disable vertical velocity
 	-- go.set("#bouncer", "linear_velocity", vmath.vector3(vmath.vector3(windowLength / 2,, 0, 0))
