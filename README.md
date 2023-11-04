@@ -25,7 +25,7 @@ Run the `Defold Buddy: Fetch Libraries` command to fetch libraries
 - [ ] Point blocks disappear upon contact
 - [ ] Add point system
 - [ ] Add timer
-- [ ] Add menu
+- [x] Add menu
 - [ ] Add back falling to bouncer
 - [ ] Create deployment pipeline to Itch.io
 
