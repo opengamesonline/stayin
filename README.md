@@ -14,8 +14,8 @@ Happy Defolding!
 
 # Setup
 
-Run the `Defold Buddy: Initialize` command to set up the workspace.
-Run the `Defold Buddy: Fetch Libraries` command to fetch libraries
+Run the `Defold Buddy: Initialize` command in vscode command palette to set up the workspace.
+Run the `Defold Buddy: Fetch Libraries` command in vscode command palette to fetch libraries
 
 ## TODO Items
 - [x] Fix issue with ball moving slow
