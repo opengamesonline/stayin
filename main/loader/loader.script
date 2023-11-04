@@ -29,6 +29,10 @@ function on_message(self, message_id, message, sender)
 		unload_startmenu(self)
 		load_main(self)
 	end
+	if message_id == hash("quit_game") then
+		unload_main(self)
+		load_startmenu(self)
+	end		
 	if message_id == hash("goto_settingsmenu") then
 		unload_startmenu(self)
 		load_settingsmenu(self)

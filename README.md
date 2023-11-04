@@ -20,6 +20,7 @@ Run the `Defold Buddy: Fetch Libraries` command to fetch libraries
 ## TODO Items
 - [x] Fix issue with ball moving slow
 - [x] Fix issue with ball speed changing on window resize
+- [ ] Fix issue with ball speed changing on window move
 - [ ] Use factory to create point blocks, make them Kinematic
 - [ ] Point blocks disappear upon contact
 - [ ] Add point system
