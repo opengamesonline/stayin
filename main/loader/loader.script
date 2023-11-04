@@ -1,22 +1,40 @@
-local function load_menu(self)
-	msg.post("loader#menu", "load")
-	msg.post("loader#menu", "enable")
+local function load_startmenu(self)
+	msg.post("loader#startmenu", "load")
+	msg.post("loader#startmenu", "enable")
 end
-local function unload_menu(self)
-	msg.post("loader#menu","unload")
+local function unload_startmenu(self)
+	msg.post("loader#startmenu","unload")
+end
+local function load_settingsmenu(self)
+	msg.post("loader#settingsmenu", "load")
+	msg.post("loader#settingsmenu", "enable")
+end
+local function unload_settingsmenu(self)
+	msg.post("loader#settingsmenu","unload")
 end
 local function load_main(self)
 	msg.post("loader#main", "load")
 	msg.post("loader#main", "enable")
 end
+local function unload_main(self)
+	msg.post("loader#main","unload")
+end
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
-	load_menu(self)
+	load_startmenu(self)
 end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("start_game") then
-		print("hello")
-		unload_menu(self)
+		unload_startmenu(self)
 		load_main(self)
+	end
+	if message_id == hash("goto_settingsmenu") then
+		unload_startmenu(self)
+		load_settingsmenu(self)
+	end
+	if message_id == hash("goto_startmenu") then
+		unload_settingsmenu(self)
+		load_startmenu(self)
 	end
 end
