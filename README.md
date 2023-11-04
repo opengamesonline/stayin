@@ -30,7 +30,7 @@ Fetch libraries `Project --> Fetch Libraries` in menu bar
 - [ ] Add point system
 - [ ] Add timer
 - [x] Add menu
-- [ ] Add back falling to bouncer
+- [x] Add back falling to bouncer
 - [ ] Create deployment pipeline to Itch.io
 
 ## Credits
