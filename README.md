@@ -15,6 +15,7 @@ Happy Defolding!
 # Setup
 
 Run the `Defold Buddy: Initialize` command to set up the workspace.
+Run the `Defold Buddy: Fetch Libraries` command to fetch libraries
 
 ## TODO Items
 - [x] Fix issue with ball moving slow
@@ -28,4 +29,5 @@ Run the `Defold Buddy: Initialize` command to set up the workspace.
 - [ ] Create deployment pipeline to Itch.io
 
 ## Credits
-- Assets made with Microsoft PowerPoint
+- Assets made with [Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint)
+- [druid component library](https://github.com/Insality/druid)
