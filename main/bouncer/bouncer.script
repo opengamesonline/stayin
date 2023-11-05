@@ -7,11 +7,11 @@ end
 
 function update(self, dt)
 	local p = go.get_position()
-	-- local velocity = go.get("#bouncer", "linear_velocity")
-	-- local windowLength, windowHeight = window.get_size()
-
-	-- disable vertical velocity
-	-- go.set("#bouncer", "linear_velocity", vmath.vector3(vmath.vector3(windowLength / 2,, 0, 0))
+-- 	local velocity = go.get("#bouncer", "linear_velocity")
+-- 	local windowLength, windowHeight = window.get_size()
+-- 
+-- 	-- disable vertical velocity
+-- 	go.set("#bouncer", "linear_velocity", vmath.vector3(vmath.vector3(windowLength / 2, 0, 0))
 
 	-- reset bouncer if it is below y == 0 (this is only for bouncer that is falling)
 	-- if p.y < 0 then
@@ -25,13 +25,13 @@ function update(self, dt)
 	self.speed = 0
 end
 
-function on_message(self, message_id, message, sender)
-	-- Handle collision
-	if message_id == hash("contact_point_response") then
-		local newpos = go.get_position() + message.normal * message.distance
-		go.set_position(newpos)
-	end
-end
+-- function on_message(self, message_id, message, sender)
+-- 	Handle collision
+-- 	if message_id == hash("contact_point_response") then
+-- 		local newpos = go.get_position() + message.normal * message.distance
+-- 		go.set_position(newpos)
+-- 	end
+-- end
 
 function on_input(self, action_id, action)
 	if action_id == hash("right") then
