@@ -1,6 +1,6 @@
 local max_speed = 600
 
-function init(self, dt)
+function init(self)
 	
 	-- Using this causes the ball to decelerate for some reason
 	-- go.set("#ball", "linear_velocity", vmath.vector3(0, -500, 0))
