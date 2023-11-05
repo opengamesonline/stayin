@@ -1,9 +1,6 @@
 local max_speed = 400
 
 function init(self)
-	local windowLength, windowHeight = window.get_size()
-	go.set_position(vmath.vector3(windowLength / 2, windowHeight / 8, 0))
-	
 	msg.post(".", "acquire_input_focus")
 	self.speed = 0
 end

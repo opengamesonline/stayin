@@ -1,8 +1,6 @@
 local max_speed = 600
 
 function init(self)
-	local windowLength, windowHeight = window.get_size()
-	go.set_position(vmath.vector3(windowLength / 2, windowHeight / 2, 0))
 	msg.post("#ball", "apply_force", {force = vmath.vector3(0, -1000, 0), position = go.get_world_position()})
 	
 	-- Using this causes the ball to decelerate for some reason
