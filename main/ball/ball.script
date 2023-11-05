@@ -13,7 +13,7 @@ function update(self, dt)
 	local velocity = go.get("#ball", "linear_velocity")
 
 	if velocity.x == 0 and velocity.y == 0 then
-		print(dt)
+		-- https://forum.defold.com/t/apply-force-not-working-has-expected/74673
 		msg.post("#ball", "apply_force", {force = (vmath.vector3(0, -500, 0) / (dt * 1)), position = go.get_world_position()})
 	end
 
