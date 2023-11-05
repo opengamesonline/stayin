@@ -1,7 +1,6 @@
 local max_speed = 600
 
-function init(self)
-	msg.post("#ball", "apply_force", {force = vmath.vector3(0, -5000, 0), position = go.get_world_position()})
+function init(self, dt)
 	
 	-- Using this causes the ball to decelerate for some reason
 	-- go.set("#ball", "linear_velocity", vmath.vector3(0, -500, 0))
@@ -12,6 +11,11 @@ function update(self, dt)
 	-- msg.post("#ball", "apply_force", {force = vmath.vector3(0, -200, 0), position = go.get_world_position()})
 	local p = go.get_position()
 	local velocity = go.get("#ball", "linear_velocity")
+
+	if velocity.x == 0 and velocity.y == 0 then
+		print(dt)
+		msg.post("#ball", "apply_force", {force = (vmath.vector3(0, -500, 0) / (dt * 1)), position = go.get_world_position()})
+	end
 
 	print(velocity)
 
