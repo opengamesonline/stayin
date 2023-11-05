@@ -12,3 +12,5 @@ builtins
 
 manifest.private.der
 manifest.public.der
+
+bundle
