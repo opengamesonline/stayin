@@ -9,3 +9,6 @@ Thumbs.db
 .cproject
 builtins
 /.defold
+
+manifest.private.der
+manifest.public.der
