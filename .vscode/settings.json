@@ -64,7 +64,8 @@
     "editor.suggest.showKeywords": false,
     "Lua.runtime.version": "Lua 5.1",
     "Lua.workspace.library": [
-        ".defold/api"
+        ".defold/api",
+        ".defold/assets"
     ],
     "Lua.workspace.ignoreDir": [
         ".vscode",

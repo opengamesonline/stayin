@@ -1,0 +1,15 @@
+local druid = require("druid.druid")
+
+local function on_back_button_callback(self)
+	msg.post("loader:/loader#loader", "goto_startmenu")
+end
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.druid = druid.new(self)
+	self.startGameButton = self.druid:new_button("backButton", on_back_button_callback)
+end
+
+function on_input(self, action_id, action)
+	return self.druid:on_input(action_id, action)
+end
