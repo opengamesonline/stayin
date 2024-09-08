@@ -53,22 +53,16 @@ instances {
     x: -0.5
   }
 }
+instances {
+  id: "boxes"
+  prototype: "/main/boxes/boxes.go"
+}
 scale_along_z: 0
 embedded_instances {
   id: "main"
   data: "components {\n"
   "  id: \"main\"\n"
   "  component: \"/main/main.gui\"\n"
-  "}\n"
-  ""
-}
-embedded_instances {
-  id: "boxes"
-  data: "embedded_components {\n"
-  "  id: \"factory\"\n"
-  "  type: \"factory\"\n"
-  "  data: \"prototype: \\\"/main/blocks/yellow-block.go\\\"\\n"
-  "\"\n"
   "}\n"
   ""
 }

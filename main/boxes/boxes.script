@@ -1,11 +1,29 @@
+-- store all box ids that are 'alive'
+local boxes = {}
+local boxes_size = 0
+
 function init(self)
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	-- create the level boxes
+	local start_height = 300
+	local end_height = 500
+	local start_width = 100
+	local end_width = 800
+
+	for i = start_height, end_height, 100
+	do
+		for j = start_width, end_width, 100
+		do
+			local id = factory.create("/boxes#boxes", vmath.vector3(j, i, 0), nil, nil, vmath.vector3(0.1, 0.1, 1))
+			table.insert(boxes, id)
+			boxes_size = boxes_size + 1
+		end
+	end
 end
 
 function final(self)
-	msg.post("main:/boxes#boxes-script", "box_dead", {id = go.get_id()})
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
 end
 
 function update(self, dt)
@@ -24,8 +42,13 @@ function fixed_update(self, dt)
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("collision_response") then
-		go.delete()
+	if message_id == hash("box_dead") then
+		local deleted_box_id = message.id
+		boxes[deleted_box_id] = nil
+		boxes_size = boxes_size - 1
+		if boxes_size == 0 then
+			print("GAME OVER!")
+		end
 	end
 end
 
