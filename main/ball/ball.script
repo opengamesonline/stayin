@@ -17,8 +17,6 @@ function update(self, dt)
 		msg.post("#ball", "apply_force", {force = (vmath.vector3(0, -500, 0) / (dt * 1)), position = go.get_world_position()})
 	end
 
-	print(velocity)
-
 	if p.y < 0 then
 		print("FAILURE")
 		go.set_position(vmath.vector3(windowLength / 2, windowHeight / 2, 0))

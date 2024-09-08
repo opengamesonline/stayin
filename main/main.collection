@@ -1,122 +1,14 @@
 name: "main"
 instances {
-  id: "yellow-block"
-  prototype: "/main/blocks/yellow-block.go"
-  position {
-    x: 235.0
-    y: 436.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 0.1
-    y: 0.1
-    z: 1.0
-  }
-}
-instances {
-  id: "yellow-block1"
-  prototype: "/main/blocks/yellow-block.go"
-  position {
-    x: 133.0
-    y: 439.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 0.1
-    y: 0.1
-    z: 1.0
-  }
-}
-instances {
-  id: "yellow-block2"
-  prototype: "/main/blocks/yellow-block.go"
-  position {
-    x: 332.0
-    y: 434.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 0.1
-    y: 0.1
-    z: 1.0
-  }
-}
-instances {
-  id: "yellow-block3"
-  prototype: "/main/blocks/yellow-block.go"
-  position {
-    x: 430.0
-    y: 435.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 0.1
-    y: 0.1
-    z: 1.0
-  }
-}
-instances {
-  id: "yellow-block4"
-  prototype: "/main/blocks/yellow-block.go"
-  position {
-    x: 530.0
-    y: 437.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 0.1
-    y: 0.1
-    z: 1.0
-  }
-}
-instances {
   id: "bouncer"
   prototype: "/main/bouncer/bouncer.go"
   position {
     x: 480.0
     y: 80.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
   }
   scale3 {
     x: 0.1
     y: 0.1
-    z: 1.0
   }
 }
 instances {
@@ -125,18 +17,10 @@ instances {
   position {
     x: 480.0
     y: 320.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
   }
   scale3 {
     x: 0.1
     y: 0.1
-    z: 1.0
   }
 }
 instances {
@@ -145,18 +29,6 @@ instances {
   position {
     x: 480.0
     y: 640.5
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }
 instances {
@@ -165,18 +37,6 @@ instances {
   position {
     x: 480.0
     y: -0.5
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }
 instances {
@@ -184,19 +44,6 @@ instances {
   prototype: "/main/walls/vertical-right-wall.go"
   position {
     x: 960.5
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
   }
 }
 instances {
@@ -204,20 +51,11 @@ instances {
   prototype: "/main/walls/vertical-left-wall.go"
   position {
     x: -0.5
-    y: 0.0
-    z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
+}
+instances {
+  id: "boxes"
+  prototype: "/main/boxes/boxes.go"
 }
 scale_along_z: 0
 embedded_instances {
@@ -225,35 +63,6 @@ embedded_instances {
   data: "components {\n"
   "  id: \"main\"\n"
   "  component: \"/main/main.gui\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
   "}\n"
   ""
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
 }

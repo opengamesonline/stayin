@@ -28,7 +28,6 @@ end
 function on_message(self, message_id, message, sender)
 	-- Handles collisions with wall for kinematic bouncer
 	if message_id == hash("contact_point_response") and message.other_id ~= hash("/ball") then
-		print(message.other_id)
 		local newpos = go.get_position() + message.normal * message.distance
 		go.set_position(newpos)
 	end

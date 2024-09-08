@@ -1,0 +1,74 @@
+-- store all box ids that are 'alive'
+local boxes = {}
+local boxes_size = 0
+
+function init(self)
+	-- create the level boxes
+	local start_height = 300
+	local end_height = 500
+	local start_width = 100
+	local end_width = 800
+
+	for i = start_height, end_height, 100
+	do
+		for j = start_width, end_width, 100
+		do
+			local id = factory.create("/boxes#boxes", vmath.vector3(j, i, 0), nil, nil, vmath.vector3(0.1, 0.1, 1))
+			table.insert(boxes, id)
+			boxes_size = boxes_size + 1
+		end
+	end
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function fixed_update(self, dt)
+	-- This function is called if 'Fixed Update Frequency' is enabled in the Engine section of game.project
+	-- Can be coupled with fixed updates of the physics simulation if 'Use Fixed Timestep' is enabled in
+	-- Physics section of game.project
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("box_dead") then
+		local deleted_box_id = message.id
+		boxes[deleted_box_id] = nil
+		boxes_size = boxes_size - 1
+		if boxes_size == 0 then
+			print("GAME OVER!")
+			-- for now we go back to main menu.
+			-- todo create winscreen
+			msg.post("loader:/loader#loader", "quit_game")
+		end
+	end
+end
+
+function on_input(self, action_id, action)
+	-- Add input-handling code here. The game object this script is attached to
+	-- must have acquired input focus:
+	--
+	--    msg.post(".", "acquire_input_focus")
+	--
+	-- All mapped input bindings will be received. Mouse and touch input will
+	-- be received regardless of where on the screen it happened.
+	-- Learn more: https://defold.com/manuals/input/
+	-- Remove this function if not needed
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end
