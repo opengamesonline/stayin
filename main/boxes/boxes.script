@@ -48,6 +48,9 @@ function on_message(self, message_id, message, sender)
 		boxes_size = boxes_size - 1
 		if boxes_size == 0 then
 			print("GAME OVER!")
+			-- for now we go back to main menu.
+			-- todo create winscreen
+			msg.post("loader:/loader#loader", "quit_game")
 		end
 	end
 end
