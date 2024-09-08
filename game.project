@@ -1,5 +1,5 @@
 [bootstrap]
-main_collection = /main/main.collectionc
+main_collection = /main/loader/loader.collectionc
 
 [script]
 shared_state = 1
@@ -13,7 +13,9 @@ input_method = HiddenInputField
 
 [project]
 title = stayin
+dependencies#0 = https://github.com/Insality/druid/archive/refs/tags/0.11.0.zip
 
 [physics]
 gravity_y = 0.0
+scale = 0.01
 

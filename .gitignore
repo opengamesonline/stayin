@@ -8,4 +8,9 @@ Thumbs.db
 .project
 .cproject
 builtins
-/.defold/api
+/.defold
+
+manifest.private.der
+manifest.public.der
+
+bundle

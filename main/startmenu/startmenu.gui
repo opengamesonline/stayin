@@ -1,0 +1,98 @@
+script: "/main/startmenu/startmenu.gui_script"
+fonts {
+  name: "system_font"
+  font: "/builtins/fonts/default.font"
+}
+textures {
+  name: "redbutton"
+  texture: "/main/buttons/redbutton.atlas"
+}
+nodes {
+  size {
+    x: 960.0
+    y: 640.0
+  }
+  color {
+    x: 0.102
+    y: 0.2
+    z: 0.6
+  }
+  type: TYPE_BOX
+  id: "background"
+  pivot: PIVOT_SW
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 480.0
+    y: 340.0
+  }
+  size {
+    x: 100.0
+    y: 20.0
+  }
+  type: TYPE_BOX
+  texture: "redbutton/button_red"
+  id: "startGameButton"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 100.0
+    y: 20.0
+  }
+  type: TYPE_TEXT
+  text: "Start Game"
+  font: "system_font"
+  id: "startGameText"
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "startGameButton"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 480.0
+    y: 300.0
+  }
+  size {
+    x: 100.0
+    y: 20.0
+  }
+  type: TYPE_BOX
+  texture: "redbutton/button_red"
+  id: "settingsButton"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 100.0
+    y: 20.0
+  }
+  type: TYPE_TEXT
+  text: "Settings"
+  font: "system_font"
+  id: "settingsText"
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "settingsButton"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
