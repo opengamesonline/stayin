@@ -7,7 +7,21 @@ end
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.druid = druid.new(self)
-	self.startGameButton = self.druid:new_button("quitbutton", on_quit_button_callback)
+	self.quitGameButton = self.druid:new_button("quitbutton", on_quit_button_callback)
+
+	-- create the level boxes
+	local start_height = 300
+	local end_height = 500
+	local start_width = 100
+	local end_width = 800
+	
+	for i = start_height, end_height, 100
+	do
+		for j = start_width, end_width, 100
+		do
+			factory.create("/boxes#factory", vmath.vector3(j, i, 0), nil, nil, vmath.vector3(0.1, 0.1, 1))
+		end
+	end
 end
 
 function on_input(self, action_id, action)
