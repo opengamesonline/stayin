@@ -20,8 +20,18 @@ local function unload_main(self)
 	msg.post("loader#main","unload")
 end
 
+local function window_callback(self, event, data)
+	if event == window.WINDOW_EVENT_FOCUS_LOST then
+		print("window.WINDOW_EVENT_FOCUS_LOST")
+		msg.post("main:/main#main", "pause_game")
+	elseif event == window.WINDOW_EVENT_RESIZED then
+		msg.post("main:/main#main", "pause_game")
+	end
+end
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
+	window.set_listener(window_callback)
 	load_startmenu(self)
 end
 function on_message(self, message_id, message, sender)
@@ -40,13 +50,5 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("goto_startmenu") then
 		unload_settingsmenu(self)
 		load_startmenu(self)
-	end
-	if message_id == hash("pause_game") then
-		local paused = message.paused
-		if paused then
-			msg.post("loader#main", "set_time_step", {factor = 0, mode = 1})
-		else
-			msg.post("loader#main", "set_time_step", {factor = 1, mode = 1})
-		end
 	end
 end

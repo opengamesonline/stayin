@@ -1,17 +1,23 @@
 local druid = require("druid.druid")
 
-local function on_quit_button_callback(self)
-	msg.post("loader:/loader#loader", "quit_game")
-end
-
 local function on_pause_button_callback(self)
 	self.paused = not self.paused
 	msg.post("loader:/loader#loader", "pause_game", {paused = self.paused})
 	if self.paused then
 		gui.set_text(gui.get_node("pausetext"), "Resume")
+		msg.post("loader:/loader#main", "set_time_step", {factor = 0, mode = 1})
 	else
 		gui.set_text(gui.get_node("pausetext"), "Pause")
+		msg.post("loader:/loader#main", "set_time_step", {factor = 1, mode = 1})
 	end
+end
+
+local function on_quit_button_callback(self)
+	-- if we are paused then we unpause
+	if self.paused then
+		on_pause_button_callback(self)
+	end
+	msg.post("loader:/loader#loader", "quit_game")
 end
 
 function init(self)
@@ -24,4 +30,11 @@ end
 
 function on_input(self, action_id, action)
 	return self.druid:on_input(action_id, action)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("pause_game") then
+		self.paused = false --we always want to pause, even if already paused
+		on_pause_button_callback(self)
+	end
 end
