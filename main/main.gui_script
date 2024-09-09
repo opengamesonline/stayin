@@ -4,10 +4,15 @@ local function on_quit_button_callback(self)
 	msg.post("loader:/loader#loader", "quit_game")
 end
 
+local function on_pause_button_callback(self)
+	msg.post("loader:/loader#loader", "pause_game")
+end
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.druid = druid.new(self)
 	self.quitGameButton = self.druid:new_button("quitbutton", on_quit_button_callback)
+	self.pauseGameButton = self.druid:new_button("pausebutton", on_pause_button_callback)
 end
 
 function on_input(self, action_id, action)

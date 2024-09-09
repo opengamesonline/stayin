@@ -23,6 +23,7 @@ end
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	load_startmenu(self)
+	self.paused = false
 end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("start_game") then
@@ -40,5 +41,16 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("goto_startmenu") then
 		unload_settingsmenu(self)
 		load_startmenu(self)
+	end
+	if message_id == hash("pause_game") then
+		self.paused = not self.paused
+		if self.paused then
+			msg.post("loader#main", "set_time_step", {factor = 0, mode = 1})
+			-- gui.set_text(gui.get_node("pauseButton"), "Resume")
+		else
+			print(" 2")
+			msg.post("loader#main", "set_time_step", {factor = 1, mode = 1})
+			-- gui.set_text(gui.get_node("pauseButton"), "Pause")
+		end
 	end
 end
