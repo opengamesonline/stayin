@@ -24,7 +24,7 @@ Fetch libraries `Project --> Fetch Libraries` in menu bar
 ## TODO Items
 - [x] Fix issue with ball moving slow
 - [x] Fix issue with ball speed changing on window resize
-- [ ] Fix issue with ball speed changing on window move
+- [x] Fix issue with ball speed changing on window move
 - [x] Use factory to create point blocks, make them Kinematic
 - [x] Point blocks disappear upon contact
 - [ ] Add point system
